@@ -67,8 +67,6 @@ $("#add-Topic").on("click", function(event){
       var giffyUrl = "https://api.giphy.com/v1/gifs/search?q=";
       var myKey = "api_key=DjtMRhmIjAR48e9WAwej7gcQEQ7svzx9";
 
-      var example =
-        "https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5";
       var searchURL = giffyUrl + qitems + "&" + myKey + "&" + "limit=10";
 
       $.ajax({
