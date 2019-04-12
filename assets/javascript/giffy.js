@@ -53,21 +53,26 @@ $("#add-Topic").on("click", function(event){
 
 });
 
-  $(document).on("click", "body *", function(event) {
-    event.preventDefault();
 
+
+$(document).on("click", "body *", function(event) {
+    event.preventDefault();
+  
    
 
 
     if (event.target.className == "superhero") {
+      $("#myContent").empty();
       event.stopPropagation();
+      
+      
       var qitem = $(this).attr("data-name");
       var qitems = qitem.replace(" ", "+");
 
       var giffyUrl = "https://api.giphy.com/v1/gifs/search?q=";
       var myKey = "api_key=DjtMRhmIjAR48e9WAwej7gcQEQ7svzx9";
 
-      var searchURL = giffyUrl + qitems + "&" + myKey + "&" + "limit=10";
+      var searchURL = giffyUrl + qitems + "&" + myKey + "&" + "limit=14";
 
       $.ajax({
         url: searchURL,
